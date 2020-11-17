@@ -1,0 +1,47 @@
+{
+  "mascotas": [
+    {
+      "id": 101,
+      "titulo": "Titulo 2",
+      "transaccion": "ventas",
+      "descripcion": "Descripcion dos",
+      "precio": 3500,
+      "animal": "perro",
+      "raza": "bulldog",
+      "fecha": "2020-06-04",
+      "vacuna": "no"
+    },
+    {
+      "id": 102,
+      "titulo": "Titulo 3",
+      "transaccion": "ventas",
+      "descripcion": "Descripcion tres",
+      "precio": 5000,
+      "animal": "gato",
+      "raza": "siames",
+      "fecha": "2020-09-05",
+      "vacuna": "si"
+    },
+    {
+      "titulo": "Cuatro",
+      "transaccion": "ventas",
+      "descripcion": "Cuatro",
+      "precio": 4500,
+      "animal": "gato",
+      "raza": "doverman",
+      "fecha": "2020-10-29",
+      "vacuna": "no",
+      "id": 104
+    },
+    {
+      "titulo": "SEIS",
+      "descripcion": "SEIS",
+      "precio": 500,
+      "animal": "perro",
+      "raza": "doverman",
+      "fecha": "2020-10-31",
+      "vacuna": "no",
+      "id": 105
+    }
+  ]
+}
