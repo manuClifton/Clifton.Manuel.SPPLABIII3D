@@ -7,7 +7,7 @@
     <script src="./js/script.js" type="module" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://bootswatch.com/4/minty/bootstrap.min.css">
-    <title>Parcial Tema 5</title>
+    <title>Parcial 2 Tema 5</title>
 </head>
 <body>
     <header class="header">
@@ -32,52 +32,6 @@
         </div>
     </section>
    
-
-    <!--   
-    <div class="container mt-5">
-        <div class="row justify-content-center" id="dataIn">
-            <div class="col-md-10">
-                <div class="card">
-                    <div class="card-body">
-
-                        <form
-                            onSubmit={submitEditarProducto}
-                        >
-                            <div className="form-group">
-                                <label>Titulo</label>
-                                <input 
-                                    type="text"
-                                    class="form-control"
-                                    name="titulo"
-                                    id="titulo"
-                                    placeholder="Ingrese Titulo"
-                                    data-validation="alphanumeric"
-                                    required
-                                />
-                            </div>
-                            <div className="form-group">
-                                <label>Precio Producto</label>
-                                <input 
-                                    type="number"
-                                    className="form-control"
-                                    placeholder="Precio Producto"
-                                    name="precio"
-                                    value={precio}
-                                    onChange={onChangeFormulario}
-                                />
-                            </div>
-                            <button
-                                type="submit"
-                                className="btn btn-primary font-weight-bold text-uppercase d-block w-100" 
-                            > Guardar Cambios</button>
-                        </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   -->
 
    <!--   FORMULARIO    -->
     <section class="contain" id="dataIn">
@@ -215,55 +169,80 @@
                 <hr>
 
                 <form>
-                   <!-- <div class="">
-                        <input type="checkbox" name="" id="" class="check" checked>Id <br>
-                        <input type="checkbox" name="" id="" class="check"  checked>Titulo <br>
-                        <input type="checkbox" name="" id="" class="check" checked>Transacción <br>
-                        <input type="checkbox" name="" id="" class="check" checked>Descipción <br>
-                        <input type="checkbox" name="" id="" class="check" checked>Precio <br>
-                        <input type="checkbox" name="" id="" class="check" checked>Animal <br>
-                        <input type="checkbox" name="" id="" class="check"  checked>Raza <br>
-                        <input type="checkbox" name="" id="" class="check" checked>Fecha <br>
-                        <input type="checkbox" name="" id="" class="check"  checked>Vacuna <br>
-                    </div>-->
 
                     <div class="container">
                         <div class="row text-center custom-control custom-checkbox" id="contenedor-checkboxs">
 
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxId" value="id" >
+                                <input
+                                type="checkbox"
+                                class="cbox custom-control-input"
+                                id="cboxId"
+                                value="id"
+                                checked >
                                 <label class="custom-control-label" for="cboxId">Id</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxTitulo" value="titulo" >
+                                <input type="checkbox" class="cbox custom-control-input" id="cboxTitulo" value="titulo" checked >
                                 <label class="custom-control-label" for="cboxTitulo">Titulo</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxTransaccion" value="transaccion" >
+                                <input
+                                type="checkbox"
+                                class="cbox custom-control-input"
+                                id="cboxTransaccion"
+                                value="transaccion" 
+                                checked >
                                 <label class="custom-control-label" for="cboxTransaccion">Transaccion</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxDescripcion" value="descripcion" >
+                                <input 
+                                type="checkbox" 
+                                class="cbox custom-control-input" 
+                                id="cboxDescripcion" 
+                                value="descripcion" 
+                                checked >
                                 <label class="custom-control-label" for="cboxDescripcion">Descripcion</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxPrecio" value="precio" >
+                                <input type="checkbox" 
+                                class="cbox custom-control-input" 
+                                id="cboxPrecio" 
+                                value="precio" 
+                                checked >
                                 <label class="custom-control-label" for="cboxPrecio">Precio</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxAnimal" value="animal" >
+                                <input 
+                                type="checkbox" 
+                                class="cbox custom-control-input" 
+                                id="cboxAnimal" 
+                                value="animal" 
+                                checked >
                                 <label class="custom-control-label" for="cboxAnimal">Animal</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxRaza" value="raza" >
+                                <input type="checkbox" 
+                                class="cbox custom-control-input" 
+                                id="cboxRaza" 
+                                value="raza" 
+                                checked>
                                 <label class="custom-control-label" for="cboxRaza">Raza</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxFecha" value="decha" >
+                                <input type="checkbox" 
+                                class="cbox custom-control-input" 
+                                id="cboxFecha" 
+                                value="decha" 
+                                checked >
                                 <label class="custom-control-label" for="cboxFecha">Fecha</label>
                             </div>
                             <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" class="cbox custom-control-input" id="cboxVacuna" value="vacuna" >
+                                <input type="checkbox" 
+                                class="cbox custom-control-input" 
+                                id="cboxVacuna" 
+                                value="vacuna" 
+                                checked >
                                 <label class="custom-control-label" for="cboxVacuna">Vacuna</label>
                             </div>
                         </div>
@@ -272,7 +251,6 @@
             </div>
         </div>
     </section>
-
 
 
     <!--     TABLA       -->

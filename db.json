@@ -1,37 +1,47 @@
 {
   "mascotas": [
     {
-      "id": 101,
-      "titulo": "Titulo 2",
+      "titulo": "Con un 6",
       "transaccion": "ventas",
-      "descripcion": "Descripcion dos",
-      "precio": 3500,
-      "animal": "perro",
-      "raza": "bulldog",
-      "fecha": "2020-06-04",
-      "vacuna": "no"
-    },
-    {
-      "id": 102,
-      "titulo": "Titulo 3",
-      "transaccion": "ventas",
-      "descripcion": "Descripcion tres",
+      "descripcion": "Me conformo",
       "precio": 5000,
       "animal": "gato",
       "raza": "siames",
       "fecha": "2020-09-05",
-      "vacuna": "si"
+      "vacuna": "si",
+      "id": 102
     },
     {
-      "titulo": "Cinco",
+      "titulo": "Me conformo",
       "transaccion": "ventas",
       "descripcion": "Cinco",
-      "precio": "500",
+      "precio": 5000,
       "animal": "perro",
       "raza": "doverman",
       "fecha": "2020-10-31",
       "vacuna": "no",
       "id": 105
+    },
+    {
+      "titulo": "Gatito",
+      "descripcion": "roronronro",
+      "precio": 7500,
+      "animal": "gato",
+      "raza": "doverman",
+      "fecha": "2020-11-20",
+      "vacuna": "no",
+      "id": 106
+    },
+    {
+      "titulo": "Canela",
+      "transaccion": "ventas",
+      "descripcion": "canelon",
+      "precio": 2350,
+      "animal": "gato",
+      "raza": "bulldog",
+      "fecha": "2020-11-12",
+      "vacuna": "no",
+      "id": 108
     }
   ]
 }

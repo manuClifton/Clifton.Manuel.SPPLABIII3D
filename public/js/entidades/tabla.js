@@ -20,12 +20,12 @@ export function crearTabla(lista){
 function crearCabecera(item){
 
     const thead = document.createElement('thead');
-    thead.setAttribute('class', 'bg-secondary table-dark') //pregunta si tiene el atributo y sino lo crea
+    thead.setAttribute('class', 'bg-secondary table-dark') 
     const tr = document.createElement('tr');
    
     for (const key in item) {
         const th = document.createElement('th');
-        th.setAttribute('scope', 'col') //pregunta si tiene el atributo y sino lo crea
+        th.setAttribute('scope', 'col') 
         const titulo = document.createTextNode(key);
         th.appendChild(titulo);
         //th.textContent = key;
@@ -42,11 +42,11 @@ function crearCuerpo(lista){
 
     lista.forEach(element => {
         const tr = document.createElement('tr');
-        tr.setAttribute('scope', 'row') //pregunta si tiene el atributo y sino lo crea
+        tr.setAttribute('scope', 'row') 
 
         for (const key in element) {
             const td = document.createElement('td');
-            td.setAttribute('class', 'font-weight-bold') //pregunta si tiene el atributo y sino lo crea
+            td.setAttribute('class', 'font-weight-bold') 
             
             const texto = document.createTextNode(element[key]);
 

@@ -25,6 +25,8 @@ let inputPromedio;
 let filtro;
 let checks;
 
+
+
 window.addEventListener('load', inicializarManejadores);
 
  async function inicializarManejadores(){
@@ -50,6 +52,9 @@ window.addEventListener('load', inicializarManejadores);
          actualizarLista(listaMascotas);
     });
     frm2 = document.forms[1];
+
+    checks = document.querySelectorAll( '.cbox' );
+    checks.forEach( element  =>  { filtrarColumnas( element, listaMascotas ); });
 
 }
 
@@ -115,6 +120,44 @@ filtro.addEventListener('change', async (e) =>{
     //actualizarLista(lista);
 });
 
+
+
+async function filtrarColumnas( check, listaMascotas ) {
+    
+
+    check.addEventListener( 'click', async() => { 
+        let listaMapeada = listaMascotas.map( row => { 
+            let fila = {};
+            for (const key in row) {
+                console.log(key);
+                if ( document.getElementById('cbox'+key).checked ) {
+                    fila[key] = row[key];
+                }
+
+            }
+            return fila;
+        })
+
+        console.log(listaMapeada);
+        actualizarLista(listaMapeada);
+
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 checks = document.getElementById('contenedor-checkboxs');
 
 checks.addEventListener('change', async (e)=>{
@@ -136,4 +179,4 @@ function filtrarColumnas(){
     });
 
    // console.log(activos);
-}
+}*/

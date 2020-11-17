@@ -5,7 +5,7 @@ import {
     limpiar
 } from '../entidades/tabla.js';
 
-const URL = "http://localhost:4000/mascotas/";
+const URL = "http://localhost:8350/mascotas/";
 
 
 export function obtenerMascotasXhr(){
@@ -120,6 +120,7 @@ export function bajaMascotaXhr(id){
 
 export function modificarMascota(mascota){
     let id = mascota.id;
+    mascota.precio = parseInt(mascota.precio);
     delete mascota.id;
 
     const config = {
@@ -153,16 +154,9 @@ export function actualizarLista(listaMascotas){
             divTabla.removeChild(divTabla.lastChild);
           }
           divTabla.appendChild(crearTabla(listaMascotas));
-    }, 3000);
+    }, 2000);
 }
 
-function mostrarSpinner(){
-    divTabla.innerHTML = "<img src='image/spinner.gif' style=' margin-top: 5vw;' class='text.center' >";
-
-    setTimeout(() => {
-        divTabla.innerHTML = "";
-    }, 1000);
-}
 
 export async function buscarMascota(id){
 
