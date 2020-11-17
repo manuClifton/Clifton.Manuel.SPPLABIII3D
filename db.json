@@ -23,20 +23,10 @@
       "vacuna": "si"
     },
     {
-      "titulo": "Cuatro",
+      "titulo": "Cinco",
       "transaccion": "ventas",
-      "descripcion": "Cuatro",
-      "precio": 4500,
-      "animal": "gato",
-      "raza": "doverman",
-      "fecha": "2020-10-29",
-      "vacuna": "no",
-      "id": 104
-    },
-    {
-      "titulo": "SEIS",
-      "descripcion": "SEIS",
-      "precio": 500,
+      "descripcion": "Cinco",
+      "precio": "500",
       "animal": "perro",
       "raza": "doverman",
       "fecha": "2020-10-31",

@@ -1,9 +1,9 @@
 
 import {
-    obtenerMascotas,
+    obtenerMascotasXhr,
     actualizarLista,
     altaMascota,
-    bajaMascota,
+    bajaMascotaXhr,
     modificarMascota,
     promedio
 } from './controller/logica.js';
@@ -29,7 +29,7 @@ window.addEventListener('load', inicializarManejadores);
 
  async function inicializarManejadores(){
 
-    listaMascotas = await obtenerMascotas();
+    listaMascotas = await obtenerMascotasXhr();
 
     console.log(listaMascotas);
 
@@ -45,7 +45,7 @@ window.addEventListener('load', inicializarManejadores);
 
         let exito = await altaMascota(frm);
         
-        listaMascotas = await obtenerMascotas();
+        listaMascotas = await obtenerMascotasXhr();
 
          actualizarLista(listaMascotas);
     });
@@ -67,9 +67,9 @@ btnDelete.addEventListener('click', async (e) =>{
     //Eliminar de la lista y actualizar
     console.log(idSeleccionado);
     
-    let exito = bajaMascota(idSeleccionado);
+    let exito = bajaMascotaXhr(idSeleccionado);
 
-    listaMascotas = await obtenerMascotas();
+    listaMascotas = await obtenerMascotasXhr();
 
     actualizarLista(listaMascotas);
     limpiar();
@@ -80,7 +80,6 @@ btnEdit = document.getElementById('btnEdit');
 btnEdit.addEventListener('click', async e =>{
     e.preventDefault();
     //Eliminar de la lista y actualizar
-   // console.log(idSeleccionado);
 
     let mascota = listaMascotas.find(element => element['id'] == idSeleccionado);
     console.log(mascota);
@@ -94,7 +93,7 @@ btnEdit.addEventListener('click', async e =>{
 
     let exito = await modificarMascota(mascota);
 
-    listaMascotas = await obtenerMascotas();
+    listaMascotas = await obtenerMascotasXhr();
 
     actualizarLista(listaMascotas);
     limpiar();

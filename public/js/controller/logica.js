@@ -5,7 +5,7 @@ import {
     limpiar
 } from '../entidades/tabla.js';
 
-const URL = "http://localhost:5000/mascotas/";
+const URL = "http://localhost:4000/mascotas/";
 
 
 export function obtenerMascotasXhr(){
@@ -22,7 +22,23 @@ export function obtenerMascotasXhr(){
                     //Si todo sale bien
                     datos = JSON.parse(xhr.responseText);
     
-                    resolve(datos);
+                    const mascotas = [];
+
+                    datos.forEach(element => {
+                        const mascotaOrdenada = new Anuncio_Mascota(
+                            element.id,
+                            element.titulo,
+                            element.descripcion,
+                            element.precio,
+                            element.animal,
+                            element.raza,
+                            element.fecha,
+                            element.vacuna
+                        );
+                        mascotas.push(mascotaOrdenada);
+                    });
+                    
+                    resolve(mascotas);
     
                 }else{
                     //salio todo mal
@@ -150,7 +166,7 @@ function mostrarSpinner(){
 
 export async function buscarMascota(id){
 
-    let lista  = await obtenerMascotas();
+    let lista  = await obtenerMascotasXhr();
     lista.forEach(element => {
         if(element['id'] == id){
             let frm = document.forms[0];
